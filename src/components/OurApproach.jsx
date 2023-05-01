@@ -20,7 +20,11 @@ const OurApproach = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1200,
+        breakpoint: 8000,
+        settings: "unslick",
+      },
+      {
+        breakpoint: 992,
         settings: {
           slidesToShow: 4,
           arrows: false,
@@ -56,7 +60,7 @@ const OurApproach = () => {
       <div className="d-xl-flex">
         <div className="w_66 w_100 my-2 my-xl-0 bgDarkBlue py-3 py-lg-5">
           <div className="sectionContainer">
-            <Slider {...settings} className="pt-4 justify-content-center">
+            <Slider {...settings} className="pt-4 justify-content-center row">
               <Col xs={6} sm={4} md={3}>
                 <div
                   onClick={() => setfirst(1)}
@@ -142,91 +146,7 @@ const OurApproach = () => {
                   </h5>
                 </div>
               </Col>
-              <Col xs={6} sm={4} md={3}>
-                <div
-                  onClick={() => setfirst(1)}
-                  className={
-                    first === 1 ? " p-3 DataBgBlue" : " DataBgtransparent p-3"
-                  }
-                >
-                  <p
-                    className={
-                      first === 1
-                        ? "mb-0 text-white fw-semibold fs_xsm fs_xsm GreenBox"
-                        : "blueBox mb-0 text-white fw-semibold "
-                    }
-                  >
-                    1
-                  </p>
-                  <h5 className="mb-0 mt-3 text-white fs_sm fw-semibold">
-                    Big <span className="d-block mt-1">Data</span>
-                  </h5>
-                </div>
-              </Col>
-              <Col xs={6} sm={4} md={3}>
-                <div
-                  onClick={() => setfirst(2)}
-                  className={
-                    first === 2 ? " p-3 DataBgBlue" : "  DataBgtransparent p-3"
-                  }
-                >
-                  <p
-                    className={
-                      first === 2
-                        ? "GreenBox  mb-0 text-white fw-semibold fs_xsm fs_xsm "
-                        : "blueBox  mb-0 text-white fw-semibold "
-                    }
-                  >
-                    2
-                  </p>
-                  <h5 className="mb-0 mt-3 text-white fs_sm fw-semibold">
-                    Event-<span className="d-block mt-1">Driven </span>
-                  </h5>
-                </div>
-              </Col>
-              <Col xs={6} sm={4} md={3}>
-                <div
-                  onClick={() => setfirst(3)}
-                  className={
-                    first === 3 ? " p-3 DataBgBlue" : "  DataBgtransparent p-3"
-                  }
-                >
-                  <p
-                    className={
-                      first === 3
-                        ? "GreenBox  mb-0 text-white fw-semibold fs_xsm fs_xsm "
-                        : "blueBox  mb-0 text-white fw-semibold "
-                    }
-                  >
-                    3
-                  </p>
-                  <h5 className="mb-0 mt-3 text-white fs_sm fw-semibold">
-                    Artificial{" "}
-                    <span className="d-block mt-1">Intelligence </span>
-                  </h5>
-                </div>
-              </Col>
-              <Col xs={6} sm={4} md={3}>
-                <div
-                  onClick={() => setfirst(4)}
-                  className={
-                    first === 4 ? " p-3 DataBgBlue" : "  DataBgtransparent p-3"
-                  }
-                >
-                  <p
-                    className={
-                      first === 4
-                        ? "GreenBox  mb-0 text-white fw-semibold fs_xsm fs_xsm "
-                        : "blueBox  mb-0 text-white fw-semibold "
-                    }
-                  >
-                    4
-                  </p>
-                  <h5 className="mb-0 mt-3 text-white fs_sm fw-semibold">
-                    Predictive <span className="d-block mt-1">Analytics </span>
-                  </h5>
-                </div>
-              </Col>
+              
             </Slider>
             <Row className="py-4 my-4 my-lg-5 mx-1 mx-sm-0 rowBg align-items-center justify-content-center justify-content-lg-between">
               <Col className="my-2 my-lg-0" md={8} lg={6}>
