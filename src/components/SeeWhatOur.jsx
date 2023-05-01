@@ -51,7 +51,7 @@ const SeeWhatOur = () => {
           />
         </div>
         <div className="positionCardSky position-absolute opacity"></div>
-        <div className="positionCardgreen position-absolute opacity "></div>
+        <div className="positionCardgreen position-absolute opacity1 "></div>
         <Slider {...settings} ref={first} className="py-5 ">
           <Col className="px-lg-1" lg={6}>
             <div className="cardBackground p-3 p-md-5 ">

@@ -599,6 +599,14 @@ path {
     opacity: 0.3;
   }
 }
+.opacity1 {
+  animation: opacit 4s linear infinite;
+}
+@keyframes opacit {
+  50% {
+    opacity: 0.2;
+  }
+}
 /* navbar items */
 .menuitems {
   background-color: #1ad079;

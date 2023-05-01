@@ -14,9 +14,9 @@ const Identify = () => {
   return (
     <div className="z_2 position-relative ">
       <div className="positiongreenBox position-absolute opacity top-50 end-0"></div>
-      <div className="positionskyBox position-absolute opacity  start-0"></div>
+      <div className="positionskyBox position-absolute opacity1  start-0"></div>
       <div className="positionskyBox2 position-absolute opacity bottom-0 start-0"></div>
-      <div className="positionlightgreenBox position-absolute opacity  end-0 top-0"></div>
+      <div className="positionlightgreenBox position-absolute opacity1  end-0 top-0"></div>
       <Container className="customContainer">
         <div className=" headerLine mb-5"></div>
         <div></div>
