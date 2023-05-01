@@ -22,14 +22,14 @@ const NavBar = () => {
                 <img className="w_110 w_md_170" src={navLogo} alt="navLogo" />
               </a>
               <a
-                className="d d-none d-lg-block NavLinks position-relative   text-black ms-5 fw-semibold fs_md"
+                className="d d-none d-md-block NavLinks position-relative   text-black ms-5 fw-semibold fs_md"
                 href="#"
               >
                 <img src={financial} alt="financial" />
                 <span className="ps-2 "> Financial Services</span>
               </a>
               <a
-                className="d d-none d-lg-block NavLinks position-relative   text-black ms-5 fw-semibold fs_md"
+                className="d d-none d-md-block NavLinks position-relative   text-black ms-5 fw-semibold fs_md"
                 href="#"
               >
                 <img src={realState} alt="realState" />
@@ -52,7 +52,7 @@ const NavBar = () => {
               />
               <a
                 onClick={() => setNav(false)}
-                className=" my-3 my-lg-0  d-lg-none NavLinks position-relative   text-black  fw-semibold fs_md"
+                className=" my-3 my-lg-0  d-md-none NavLinks position-relative   text-black  fw-semibold fs_md"
                 href="#"
               >
                 <img src={financial} alt="financial" />
@@ -60,7 +60,7 @@ const NavBar = () => {
               </a>
               <a
                 onClick={() => setNav(false)}
-                className=" my-3 my-lg-0  d-lg-none NavLinks position-relative   text-black  fw-semibold fs_md"
+                className=" my-3 my-lg-0  d-md-none NavLinks position-relative   text-black  fw-semibold fs_md"
                 href="#"
               >
                 <img src={realState} alt="realState" />
