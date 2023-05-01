@@ -1,38 +1,973 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none !important;
+  text-decoration: none !important;
+  box-sizing: border-box;
+  font-family: "Segoe UI" !important;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: white !important;
+  margin: 15px !important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.preloader {
+  background: #e6ebff;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 6;
+}
+
+/* roots */
+:root {
+  --fs-xsm: 12px;
+  --fs-sm: 13px;
+  --fs-md: 14px;
+  --fs-lg: 15px;
+  --fs-xl: 16px;
+  --fs-2xl: 19px;
+  --fs-3xl: 23px;
+  --fs-4xl: 26px;
+  --fs-5xl: 30px;
+  --fs-6xl: 31px;
+  --fs-7xl: 32px;
+  --fs-8xl: 37px;
+  --fs-9xl: 40px;
+}
+.fs_xsm {
+  font-size: var(--fs-xsm);
+}
+.fs_sm {
+  font-size: var(--fs-sm);
+}
+.fs_md {
+  font-size: var(--fs-md);
+}
+.fs_lg {
+  font-size: var(--fs-lg);
+}
+.fs_xl {
+  font-size: var(--fs-xl);
+}
+.fs_2xl {
+  font-size: var(--fs-2xl);
+}
+.fs_3xl {
+  font-size: var(--fs-3xl);
+}
+.fs_4xl {
+  font-size: var(--fs-4xl);
+}
+.fs_5xl {
+  font-size: var(--fs-5xl);
+}
+.fs_6xl {
+  font-size: var(--fs-6xl);
+}
+.fs_7xl {
+  font-size: var(--fs-7xl);
+}
+.fs_8xl {
+  font-size: var(--fs-8xl);
+}
+.fs_9xl {
+  font-size: var(--fs-9xl);
+}
+/* text-color */
+.text_green_50 {
+  color: #149766;
+}
+.text_green {
+  color: #1ad079;
+}
+.text_white_50 {
+  color: #b5b8c4;
+}
+.text_black_70 {
+  color: #4a4a4a;
+}
+.text_dark_70 {
+  color: #4d4d4d;
+}
+.text_dark {
+  color: #b8bcc7;
+}
+.text_white_40 {
+  color: #b8bcc7;
+}
+.text_black_80 {
+  color: #5a5a5a;
+}
+.text_white_20 {
+  color: #b4b7c5;
+}
+/* background */
+.footerBgDark {
+  background: #07133b;
+  border-radius: 15px;
+}
+.bg_image {
+  background-image: url("../src/assets/img/png/bgImage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 946px;
+  margin-left: auto;
+  border-radius: 14px;
+  margin-right: auto;
+}
+.navBg {
+  background: white;
+  border-radius: 8px;
+}
+.bgDarkBlue {
+  background: #07133b;
+  border-radius: 15px;
+}
+.rowBg {
+  background: #141f45;
+  border-radius: 8px;
+}
+.DataBgBlue {
+  background: #141f45;
+  border-radius: 7.62055px;
+}
+.DataBgtransparent {
+  background: transparent;
+  border-radius: 7.62055px;
+}
+/* hover */
+.NavLinks:hover::after {
+  width: 100%;
+  left: 0;
+}
+.footerLinks:hover::after {
+  width: 100%;
+  left: 0;
+}
+.playBtnCircle:hover path {
+  fill: white;
+  stroke: white;
+}
+.playBtnCircle:hover {
+  background-color: #83899d !important;
+}
+.cardBackground:hover {
+  background-color: #1ad079;
+}
+.footerBtn:hover .btnCircle1 {
+  border: 1px solid #b5b8c4;
+  background-color: transparent;
+}
+.footerBtn:hover {
+  color: #b5b8c4;
+  border: 1px solid #b5b8c4;
+}
+.submitBtn:hover {
+  color: #1ad079 !important;
+  background-color: transparent;
+  border-color: #1ad079;
+}
+.lineAfter:hover::after {
+  background-color: #1ad079;
+}
+.lineAfter:hover {
+  color: #1ad079;
+}
+.navBtn:hover {
+  color: white;
+  background-color: #1ad079;
+}
+.logBtn:hover path {
+  fill: white;
+}
+.logBtn:hover {
+  color: white;
+  background-color: #1ad079;
+}
+.startBtn:hover {
+  color: #1ad079 !important;
+  background-color: transparent;
+  border: 1px solid #1ad079;
+}
+.bookBtn:hover path {
+  fill: white;
+  stroke: white;
+}
+.bookBtn:hover {
+  background: #1ad079;
+  border-radius: 4px;
+  padding: 8px 10px;
+  color: white !important;
+  transition: 0.5s ease-in-out;
+  border: 1px solid transparent;
+}
+.cardBox:hover {
+  transform: translateY(-10px);
+}
+.signBtn:hover {
+  color: #1ad079 !important;
+  background-color: white;
+}
+.signBtn2:hover {
+  color: #1ad079 !important;
+  background-color: white;
+}
+.registerBtn:hover {
+  color: #1ad079;
+}
+.stateBtn:hover .btnCircle {
+  border-color: #1ad079;
+  background-color: #1ad079;
+}
+.stateBtn:hover {
+  color: #149766;
+  border: 1px solid #1ad079;
+}
+/* btn */
+.stateBtn {
+  transition: 0.5s ease-in-out;
+  padding: 10px 6px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: transparent;
+}
+.footerBtn {
+  transition: 0.5s ease-in-out;
+  padding: 10px 5px;
+  border: 1px solid #1ad079;
+  border-radius: 4px;
+  background-color: transparent;
+}
+.registerBtn {
+  color: #b5b8c4;
+  background: transparent;
+  border: 0;
+  transition: 0.5s ease-in-out;
+}
+.signBtn {
+  background: #1ad079;
+  border-radius: 4px;
+  padding: 8px 16px;
+  border: 0;
+  transition: 0.5s ease-in-out;
+}
+.signBtn2 {
+  background: #1ad079;
+  border-radius: 4px;
+  padding: 15px 62px;
+  border: 0;
+  transition: 0.5s ease-in-out;
+}
+.bookBtn {
+  background: transparent;
+  border-radius: 4px;
+  padding: 8px 10px;
+  transition: 0.5s ease-in-out;
+  border: 1px solid transparent;
+}
+.startBtn {
+  background: #1ad079;
+  border-radius: 4px;
+  padding: 8px 16px;
+  transition: 0.5s ease-in-out;
+  border: 1px solid transparent;
+}
+.navBtn {
+  padding: 10px 20px;
+  background-color: transparent;
+  transition: 0.4s ease-in-out;
+  border-radius: 8px;
+}
+.logBtn {
+  padding: 11px 25px;
+  border: 1px solid #1ad079;
+  border-radius: 4px;
+  transition: 0.4s ease-in-out;
+}
+.submitBtn {
+  background: #1ad079;
+  border-radius: 4px;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  border: 1px solid #1ad079;
+  padding: 13px 0;
+}
+/* cards */
+.cardBox {
+  background: rgba(217, 217, 217, 0.2);
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+.cardBackground {
+  background: #ffffff;
+  border-radius: 10px;
+  height: 210px;
+  transition: 0.5s ease-in-out;
+}
+/* others */
+.inputModify {
+  padding: 13px 10px;
+  background: #141f45;
+  border-radius: 4px;
+  border: 0;
+  outline: none;
+  transition: 0.5s ease-in-out;
+  width: 100%;
+}
+.cardCircle {
+  background: #e4f9ef;
+  border: 2px solid #1ad079;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1ad079;
+}
+.playBtnCircle {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+}
+.btnCircle1 {
+  height: 16px;
+  width: 16px;
+  border: 1px solid #149766;
+  border-radius: 50%;
+  transition: 0.4s ease-in-out;
+  background-color: #149766;
+}
+.btnCircle {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  transition: 0.4s ease-in-out;
+  border: 2px solid #b5b8c4;
+  background-color: transparent;
+}
+.headerLine {
+  border: 2px solid #ced8f9;
+}
+.sectionLine {
+  border: 2px solid #ced8f9;
+}
+path {
+  transition: 0.5s ease-in-out;
+}
+.w_110 {
+  width: 110px;
+}
+.w_100 {
+  width: 100%;
+}
+.z_4 {
+  z-index: 4 !important;
+}
+.z_2 {
+  z-index: 2 !important;
+}
+.curser {
+  cursor: pointer;
+}
+::placeholder {
+  color: #b8bcc7;
+}
+.triangleBox {
+  background: #ffffff;
+  border-radius: 8px;
+}
+.imageOpacity {
+  opacity: 0.3;
+}
+.footerLine {
+  border: 3px solid #182449;
 }
 
-.App-link {
-  color: #61dafb;
+.sectionContainer {
+  max-width: 642px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.blueBox {
+  background: #141f45;
+  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.GreenBox {
+  background: #1ad079;
+  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* position boxes */
+.positiongreenBox {
+  background: #d4f4e6;
+  filter: blur(100px);
+  width: 250px;
+  height: 250px;
+  z-index: -1;
+}
+.positionskyBox {
+  background: rgba(139, 163, 240, 0.9);
+  filter: blur(250px);
+  width: 280px;
+  height: 280px;
+  z-index: -2;
+  top: 0%;
+}
+.positionskyBox2 {
+  background: rgba(139, 163, 240, 0.9);
+  filter: blur(250px);
+  width: 280px;
+  height: 280px;
+  z-index: -1;
+}
+.positionCardSky {
+  background: #e6ebff;
+  filter: blur(100px);
+  width: 280px;
+  height: 280px;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  z-index: -1;
+}
+.positionCardgreen {
+  background: #e4f9ef;
+  filter: blur(100px);
+  width: 270px;
+  left: 10%;
+  top: 10%;
+  height: 280px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.positionDarkBox {
+  background: #d9d9d9;
+  filter: blur(200px);
+  width: 200px;
+  height: 150px;
+  z-index: -1 !important;
+}
+.positionlightgreenBox {
+  background: #dff6ec;
+  filter: blur(75px);
+  width: 280px;
+  height: 280px;
+  z-index: -1 !important;
+}
+.setTriangleImage {
+  position: absolute;
+  left: -6%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.positionbluebox {
+  background: #3861eb;
+  filter: blur(125px);
+  height: 150px;
+  width: 150px;
+  z-index: -1;
+}
+.end_10 {
+  right: 10%;
+}
+.top_40 {
+  top: 40%;
+}
+.setBtn {
+  right: -5%;
+  bottom: 15%;
+}
+/* **** */
+.position1image {
+  position: absolute;
+  top: 18%;
+  left: 0;
+}
+.position2image {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+}
+.position3image {
+  position: absolute;
+  bottom: 8%;
+  left: 37%;
+  width: 13%;
+}
+.position4image {
+  position: absolute;
+  top: 33%;
+  right: -2%;
+  width: 13%;
+}
+.position5image {
+  position: absolute;
+  top: 21%;
+  right: -10%;
+  width: 30%;
+}
+.position6image {
+  position: absolute;
+  bottom: -4%;
+  right: 15%;
+  width: 10%;
+}
+/* animation */
+.animationMove {
+  animation: mov 4s linear infinite;
+}
+@keyframes mov {
+  50% {
+    transform: translate(10px, -10px);
   }
-  to {
+}
+.animation {
+  animation: anim 4s linear infinite;
+}
+@keyframes anim {
+  50% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: rotate(20deg);
+  }
+}
+.animationMov {
+  animation: mo 4s linear infinite;
+}
+@keyframes mo {
+  50% {
+    transform: rotate(-20deg);
+  }
+  60% {
+    transform: translateX(15px);
+  }
+}
+.animationMoveY {
+  animation: movy 3s linear infinite;
+}
+@keyframes movy {
+  50% {
+    transform: translateY(10px);
+  }
+}
+.animationRotate {
+  animation: rotate 7s linear infinite;
+}
+@keyframes rotate {
+  50% {
     transform: rotate(360deg);
+  }
+}
+.transformX {
+  animation: tran 4s linear infinite;
+}
+@keyframes tran {
+  50% {
+    transform: translateX(-200px);
+  }
+}
+.opacity {
+  animation: opac 6s linear infinite;
+}
+@keyframes opac {
+  50% {
+    opacity: 0.3;
+  }
+}
+/* navbar items */
+.menuitems {
+  background-color: #1ad079;
+  width: 20px;
+  height: 2px;
+}
+.navOpen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 60;
+  background-color: white;
+  transition: 0.5s ease-in-out;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.navClose {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 60;
+  background-color: white;
+  transition: 0.5s ease-in-out;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+/* modal */
+.modal-dialog {
+  max-width: 972px !important;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.mw_946 {
+  width: 100%;
+  max-width: 946px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* after */
+
+.lineAfter {
+  transition: 0.5s ease-in-out;
+}
+.lineAfter::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 120%;
+  left: -9%;
+  transition: 0.4s ease-in-out;
+  height: 1px;
+  background-color: #b5b8c4;
+}
+.footerLinks::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-color: #1ad079;
+  height: 2px;
+  width: 0;
+  right: 0;
+  transition: 0.5s ease-in-out;
+}
+.NavLinks:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  transition: 0.5s ease-in-out;
+  background-color: #1ad079;
+}
+
+/* accordian */
+.accordionBox {
+  background: #141f45;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.accordionGreenBox {
+  background: #1ad079;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.accordion-body {
+  background: #141f45 !important;
+  padding: 25px 10px !important;
+  border-radius: 0 0 10px 10px;
+}
+.accordian_bg {
+  background: transparent !important;
+  padding: 13px 0;
+}
+.accordion-button:not(.collapsed) {
+  color: white !important;
+  background-color: #141f45 !important;
+  box-shadow: none !important;
+  border-radius: 10px 10px 0 0;
+}
+
+.accordion-button:focus {
+  border-color: none !important;
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.accordion-button {
+  color: white !important;
+  padding-left: 0 !important;
+  background-color: transparent !important;
+}
+.accordion-item {
+  color: #b8bcc7 !important;
+  border: 1px solid transparent !important;
+  border-radius: 10px !important;
+}
+.accordion-item:first-of-type .accordion-button {
+  background-color: transparent !important;
+  border-radius: 10px !important;
+}
+.accordion-item:last-of-type .accordion-button.collapsed {
+  background-color: white !important;
+}
+.accordion-button::after {
+  background-image: url("../src/assets/img/svg/downArrow.svg") !important;
+  rotate: 0deg !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("../src/assets/img/svg/upArrow.svg") !important;
+  rotate: 180deg !important;
+}
+.accordion-item:last-of-type .accordion-button.collapsed {
+  background-color: transparent !important;
+}
+.accordion-item:last-of-type .accordion-button {
+  background-color: #141f45 !important;
+}
+.accordion-item:first-of-type .accordion-button.collapsed {
+  background-color: transparent !important;
+}
+.accordion-item:first-of-type .accordion-button {
+  background-color: #141f45 !important;
+}
+/* media screen */
+@media (min-width: 576px) {
+  :root {
+    --fs-xsm: 13px;
+    --fs-sm: 14px;
+    --fs-md: 15px;
+    --fs-lg: 16px;
+    --fs-xl: 17px;
+    --fs-2xl: 20px;
+    --fs-3xl: 24px;
+    --fs-4xl: 27px;
+    --fs-5xl: 33px;
+    --fs-6xl: 35px;
+    --fs-7xl: 37px;
+    --fs-8xl: 40px;
+    --fs-9xl: 47px;
+  }
+  .footerBtn {
+    padding: 13px 18px;
+  }
+  .stateBtn {
+    padding: 13px 32px;
+  }
+  .signBtn {
+    padding: 12px 44px;
+  }
+  .bookBtn {
+    background: transparent;
+    border-radius: 4px;
+    padding: 15px 20px;
+    transition: 0.5s ease-in-out;
+    border: 1px solid transparent;
+  }
+  .startBtn {
+    background: #1ad079;
+    border-radius: 4px;
+    padding: 15px 50px;
+    transition: 0.5s ease-in-out;
+    border: 1px solid transparent;
+  }
+  .bookBtn:hover {
+    background: #1ad079;
+    border-radius: 4px;
+    padding: 15px 20px;
+    color: white !important;
+    transition: 0.5s ease-in-out;
+    border: 1px solid transparent;
+  }
+  .cardCircle {
+    height: 60px;
+    width: 60px;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --fs-xsm: 14px;
+    --fs-sm: 15px;
+    --fs-md: 16px;
+    --fs-lg: 17px;
+    --fs-xl: 18px;
+    --fs-2xl: 21px;
+    --fs-3xl: 26px;
+    --fs-4xl: 29px;
+    --fs-5xl: 35px;
+    --fs-6xl: 37px;
+    --fs-7xl: 39px;
+    --fs-8xl: 42px;
+    --fs-9xl: 51px;
+  }
+  .positionDarkBox {
+    background: #d9d9d9;
+    filter: blur(200px);
+    width: 280px;
+    height: 150px;
+    z-index: -1;
+  }
+  .w_md_170 {
+    width: 170px;
+  }
+  .positiongreenBox {
+    width: 400px;
+    height: 400px;
+  }
+  .positionskyBox {
+    width: 480px;
+    height: 480px;
+    top: -10%;
+  }
+  .positionskyBox2 {
+    width: 480px;
+    height: 480px;
+  }
+  .positionlightgreenBox {
+    width: 450px;
+    height: 300px;
+  }
+  .positionCardSky {
+    width: 450px;
+    height: 450px;
+    bottom: 0;
+    right: 10%;
+  }
+  .positionCardgreen {
+    width: 440px;
+    left: 25%;
+    top: 10%;
+    left: 25%;
+    height: 440px;
+  }
+  .setBtn {
+    right: 7%;
+    bottom: 15%;
+  }
+}
+@media (min-width: 992px) {
+  :root {
+    --fs-xsm: 14px;
+    --fs-sm: 15px;
+    --fs-md: 16px;
+    --fs-lg: 17px;
+    --fs-xl: 19px;
+    --fs-2xl: 22px;
+    --fs-3xl: 28px;
+    --fs-4xl: 30px;
+    --fs-5xl: 37px;
+    --fs-6xl: 39px;
+    --fs-7xl: 42px;
+    --fs-8xl: 45px;
+    --fs-9xl: 55px;
+  }
+
+  .navOpen {
+    all: unset;
+  }
+  .navClose {
+    all: unset;
+  }
+  .w_lg_100 {
+    width: 100%;
+  }
+  .setTriangleImage {
+    left: -10.9%;
+  }
+  .cardBackground {
+    height: 260px;
+  }
+  .position1image {
+    position: absolute;
+    top: 18%;
+    left: 10%;
+  }
+  .position3image {
+    position: absolute;
+    bottom: 7%;
+    left: 41%;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --fs-xsm: 14px;
+    --fs-sm: 15px;
+    --fs-md: 16px;
+    --fs-lg: 17px;
+    --fs-xl: 20px;
+    --fs-2xl: 24px;
+    --fs-3xl: 30px;
+    --fs-4xl: 32px;
+    --fs-5xl: 40px;
+    --fs-6xl: 42px;
+    --fs-7xl: 45px;
+    --fs-8xl: 49px;
+    --fs-9xl: 60px;
+  }
+  .customContainer {
+    max-width: 1140px !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .vh_xl_100 {
+    height: 100vh;
+  }
+  .positiongreenBox {
+    width: 700px;
+    height: 700px;
+  }
+  .positionskyBox {
+    width: 480px;
+    height: 480px;
+  }
+  .positionskyBox2 {
+    width: 480px;
+    height: 480px;
+  }
+  .positionlightgreenBox {
+    width: 750px;
+    height: 350px;
+  }
+  .top_xl_0 {
+    top: 0;
+  }
+  .w_66 {
+    width: 66.66%;
+  }
+  .w_33 {
+    width: 33.33%;
   }
 }
