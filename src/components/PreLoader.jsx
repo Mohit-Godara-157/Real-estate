@@ -8,7 +8,7 @@ const PreLoader = () => {
   return (
     <div>
       <div className="preloader">
-        <img className=" animatoinCard5" src={logoImage} alt="logoImage" />
+        <img className="animationMov" src={logoImage} alt="logoImage" />
       </div>
     </div>
   );
