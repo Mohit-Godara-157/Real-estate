@@ -172,7 +172,7 @@ const Footer = () => {
             </p>
             <a
               href="#"
-              className=" ms-5 my-3 my-md-0 text_white_50 position-relative lineAfter fs_xsm fw-normal"
+              className=" ms-5 ms-md-0 ms-lg-5 my-3 my-md-0 text_white_50 position-relative lineAfter fs_xsm fw-normal"
             >
               Do not sell my data
             </a>
