@@ -8,6 +8,15 @@ import Slider from "react-slick";
 
 const OurApproach = () => {
   const [first, setfirst] = useState(1);
+  const [nav1, setNav1] = React.useState(null);
+  const [nav2, setNav2] = React.useState(null);
+  let slider1 = [];
+  let slider2 = [];
+
+  React.useEffect(() => {
+    setNav1(slider1);
+    setNav2(slider2);
+  }, [slider1, slider2]);
 
   var settings = {
     dots: false,
@@ -20,11 +29,7 @@ const OurApproach = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 8000,
-        settings: "unslick",
-      },
-      {
-        breakpoint: 992,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 4,
           arrows: false,
@@ -55,12 +60,18 @@ const OurApproach = () => {
       },
     ],
   };
+
   return (
     <div className="my-5 py-3 py-xl-5">
       <div className="d-xl-flex">
         <div className="w_66 w_100 my-2 my-xl-0 bgDarkBlue py-3 py-lg-5">
           <div className="sectionContainer">
-            <Slider {...settings} className="pt-4 justify-content-center row">
+            <Slider
+              asNavFor={nav1}
+              slidesToShow={3}
+              ref={(slider) => (slider1 = slider)}
+              className="pt-4 justify-content-center  "
+            >
               <Col xs={6} sm={4} md={3}>
                 <div
                   onClick={() => setfirst(1)}
@@ -146,44 +157,182 @@ const OurApproach = () => {
                   </h5>
                 </div>
               </Col>
-              
-            </Slider>
-            <Row className="py-4 my-4 my-lg-5 mx-1 mx-sm-0 rowBg align-items-center justify-content-center justify-content-lg-between">
-              <Col className="my-2 my-lg-0" md={8} lg={6}>
-                <img
+              <Col xs={6} sm={4} md={3}>
+                <div
                   onClick={() => setfirst(1)}
-                  className={first === 1 ? "w-100 d-block" : "w-100 d-none"}
-                  src={image1}
-                  alt="image1"
-                />
-                <img
+                  className={
+                    first === 1 ? " p-3 DataBgBlue" : " DataBgtransparent p-3"
+                  }
+                >
+                  <p
+                    className={
+                      first === 1
+                        ? "mb-0 text-white fw-semibold fs_xsm fs_xsm GreenBox"
+                        : "blueBox mb-0 text-white fw-semibold "
+                    }
+                  >
+                    1
+                  </p>
+                  <h5 className="mb-0 mt-3 text-white fs_sm fw-semibold">
+                    Big <span className="d-block mt-1">Data</span>
+                  </h5>
+                </div>
+              </Col>
+              <Col xs={6} sm={4} md={3}>
+                <div
                   onClick={() => setfirst(2)}
-                  className={first === 2 ? "w-100 d-block" : "w-100 d-none"}
-                  src={image2}
-                  alt="image2"
-                />
-                <img
+                  className={
+                    first === 2 ? " p-3 DataBgBlue" : "  DataBgtransparent p-3"
+                  }
+                >
+                  <p
+                    className={
+                      first === 2
+                        ? "GreenBox  mb-0 text-white fw-semibold fs_xsm fs_xsm "
+                        : "blueBox  mb-0 text-white fw-semibold "
+                    }
+                  >
+                    2
+                  </p>
+                  <h5 className="mb-0 mt-3 text-white fs_sm fw-semibold">
+                    Event-<span className="d-block mt-1">Driven </span>
+                  </h5>
+                </div>
+              </Col>
+              <Col xs={6} sm={4} md={3}>
+                <div
                   onClick={() => setfirst(3)}
-                  className={first === 3 ? "w-100 d-block" : "w-100 d-none"}
-                  src={image3}
-                  alt="image3"
-                />
-                <img
+                  className={
+                    first === 3 ? " p-3 DataBgBlue" : "  DataBgtransparent p-3"
+                  }
+                >
+                  <p
+                    className={
+                      first === 3
+                        ? "GreenBox  mb-0 text-white fw-semibold fs_xsm fs_xsm "
+                        : "blueBox  mb-0 text-white fw-semibold "
+                    }
+                  >
+                    3
+                  </p>
+                  <h5 className="mb-0 mt-3 text-white fs_sm fw-semibold">
+                    Artificial{" "}
+                    <span className="d-block mt-1">Intelligence </span>
+                  </h5>
+                </div>
+              </Col>
+              <Col xs={6} sm={4} md={3}>
+                <div
                   onClick={() => setfirst(4)}
-                  className={first === 4 ? "w-100 d-block" : "w-100 d-none"}
-                  src={image4}
-                  alt="image4"
-                />
+                  className={
+                    first === 4 ? " p-3 DataBgBlue" : "  DataBgtransparent p-3"
+                  }
+                >
+                  <p
+                    className={
+                      first === 4
+                        ? "GreenBox  mb-0 text-white fw-semibold fs_xsm fs_xsm "
+                        : "blueBox  mb-0 text-white fw-semibold "
+                    }
+                  >
+                    4
+                  </p>
+                  <h5 className="mb-0 mt-3 text-white fs_sm fw-semibold">
+                    Predictive <span className="d-block mt-1">Analytics </span>
+                  </h5>
+                </div>
               </Col>
-              <Col className="my-2 my-lg-0" lg={5}>
-                <h4 className="mb-0 text-white fw-semibold fs_xl ">Big Data</h4>
-                <p className="text_white_40 mt-4 fs_xsm fw-semibold">
-                  We gather hundreds of millions of data points in order to
-                  perform advanced analytics to identify the highest propensity
-                  prospects
-                </p>
-              </Col>
-            </Row>
+            </Slider>
+            {/* 2nd slider */}
+            <Slider
+              asNavFor={nav2}
+              ref={(slider) => (slider2 = slider)}
+              slidesToShow={1}
+              swipeToSlide={true}
+              focusOnSelect={true}
+              className=" py-4 my-4 my-lg-5 mx-1 mx-sm-0 rowBg align-items-center justify-content-center justify-content-lg-between"
+            >
+              <div className="align-items-center d-flex justify-content-between">
+                <Col className="my-2 my-lg-0" md={8} lg={6}>
+                  <img
+                    onClick={() => setfirst(1)}
+                    className={first === 1 ? "w-100 d-block" : "w-100 d-none"}
+                    src={image1}
+                    alt="image1"
+                  />
+                </Col>
+                <Col className="my-2 my-lg-0" lg={5}>
+                  <h4 className="mb-0 text-white fw-semibold fs_xl ">
+                    Big Data
+                  </h4>
+                  <p className="text_white_40 mt-4 fs_xsm fw-semibold">
+                    We gather hundreds of millions of data points in order to
+                    perform advanced analytics to identify the highest
+                    propensity prospects
+                  </p>
+                </Col>
+              </div>
+              <div className="align-items-center d-flex justify-content-between">
+                <Col className="my-2 my-lg-0" md={8} lg={6}>
+                  <img
+                    onClick={() => setfirst(2)}
+                    className={first === 2 ? "w-100 d-block" : "w-100 d-none"}
+                    src={image2}
+                    alt="image2"
+                  />
+                </Col>
+                <Col className="my-2 my-lg-0" lg={5}>
+                  <h4 className="mb-0 text-white fw-semibold fs_xl ">
+                    Big Data
+                  </h4>
+                  <p className="text_white_40 mt-4 fs_xsm fw-semibold">
+                    We gather hundreds of millions of data points in order to
+                    perform advanced analytics to identify the highest
+                    propensity prospects
+                  </p>
+                </Col>
+              </div>
+              <div className="align-items-center d-flex justify-content-between">
+                <Col className="my-2 my-lg-0" md={8} lg={6}>
+                  <img
+                    onClick={() => setfirst(3)}
+                    className={first === 3 ? "w-100 d-block" : "w-100 d-none"}
+                    src={image3}
+                    alt="image3"
+                  />
+                </Col>
+                <Col className="my-2 my-lg-0" lg={5}>
+                  <h4 className="mb-0 text-white fw-semibold fs_xl ">
+                    Big Data
+                  </h4>
+                  <p className="text_white_40 mt-4 fs_xsm fw-semibold">
+                    We gather hundreds of millions of data points in order to
+                    perform advanced analytics to identify the highest
+                    propensity prospects
+                  </p>
+                </Col>
+              </div>
+              <div className="align-items-center d-flex justify-content-between">
+                <Col className="my-2 my-lg-0" md={8} lg={6}>
+                  <img
+                    onClick={() => setfirst(4)}
+                    className={first === 4 ? "w-100 d-block" : "w-100 d-none"}
+                    src={image4}
+                    alt="image4"
+                  />
+                </Col>
+                <Col className="my-2 my-lg-0" lg={5}>
+                  <h4 className="mb-0 text-white fw-semibold fs_xl ">
+                    Big Data
+                  </h4>
+                  <p className="text_white_40 mt-4 fs_xsm fw-semibold">
+                    We gather hundreds of millions of data points in order to
+                    perform advanced analytics to identify the highest
+                    propensity prospects
+                  </p>
+                </Col>
+              </div>
+            </Slider>
           </div>
         </div>
         <div className="w_33 w_100 my-2 my-xl-0 bgDarkBlue p-3 p-md-5  ms-xl-2">

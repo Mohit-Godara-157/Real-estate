@@ -52,19 +52,19 @@ const NavBar = () => {
               />
               <a
                 onClick={() => setNav(false)}
-                className=" my-3 my-lg-0  d-md-none NavLinks position-relative   text-black  fw-semibold fs_md"
+                className=" my-3 my-lg-0  d-md-none NavLinks d-flex align-items-center position-relative   text-black  fw-semibold fs_md"
                 href="#"
               >
                 <img src={financial} alt="financial" />
-                <span className="ps-2 pt-2 "> Financial Services</span>
+                <span className="ps-2  "> Financial Services</span>
               </a>
               <a
                 onClick={() => setNav(false)}
-                className=" my-3 my-lg-0  d-md-none NavLinks position-relative   text-black  fw-semibold fs_md"
+                className=" my-3 my-lg-0  d-md-none NavLinks d-flex align-items-center position-relative   text-black  fw-semibold fs_md"
                 href="#"
               >
                 <img src={realState} alt="realState" />
-                <span className="ps-2 pt-2 "> Real Estate</span>
+                <span className="ps-2  "> Real Estate</span>
               </a>
               <li onClick={() => setNav(false)} className=" my-3 my-lg-0">
                 <a className="fw-semibold fs_md text_green navBtn" href="#">

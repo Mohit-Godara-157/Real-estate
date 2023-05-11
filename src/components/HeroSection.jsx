@@ -7,7 +7,7 @@ import position3 from "../assets/img/png/position3.png";
 
 const HeroSection = () => {
   return (
-    <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1   ">
+    <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1  ">
       <div className="positiongreenBox transformX position-absolute top-0 end-0"></div>
       <Container className="customContainer">
         <Row className="py-5 align-items-center flex-column-reverse flex-lg-row">

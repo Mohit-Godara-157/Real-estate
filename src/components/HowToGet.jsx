@@ -70,7 +70,7 @@ const HowToGet = () => {
                   </div>
                 </Accordion.Header>
                 <Accordion.Body>
-                  <p className="mb-0 ps-2 fs_md fw-normal text_dark">
+                  <p className="mb-0 ps-5 ps-2 fs_md fw-normal text_dark">
                     Provide a zip code and we will provide you with the highest
                     propensity prospects in a 50 mile radius
                   </p>
@@ -98,7 +98,7 @@ const HowToGet = () => {
                   </div>
                 </Accordion.Header>
                 <Accordion.Body>
-                  <p className="mb-0 ps-2 fs_md fw-normal text_dark">
+                  <p className="mb-0 ps-5 fs_md fw-normal text_dark">
                     Provide a zip code and we will provide you with the highest
                     propensity prospects in a 50 mile radius
                   </p>
@@ -126,7 +126,7 @@ const HowToGet = () => {
                   </div>
                 </Accordion.Header>
                 <Accordion.Body>
-                  <p className="mb-0 ps-2 fs_md fw-normal text_dark">
+                  <p className="mb-0 ps-5 fs_md fw-normal text_dark">
                     Provide a zip code and we will provide you with the highest
                     propensity prospects in a 50 mile radius
                   </p>
@@ -157,7 +157,7 @@ const HowToGet = () => {
                 src={accordianImage4}
                 alt="accordianImage4"
               />
-              <div className="position-relative">
+              <div className="position-relative overflow-hidden">
                 <img
                   className={
                     first === 3

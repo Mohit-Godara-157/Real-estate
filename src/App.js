@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <PreLoader />
-      <div className="d-flex  flex-column vh_xl_100 position-relative z_2">
+      <div className="d-flex  flex-column vh_xl_100 position-relative z_4 ">
         <NavBar />
         <HeroSection />
       </div>

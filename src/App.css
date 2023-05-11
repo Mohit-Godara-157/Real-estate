@@ -378,6 +378,9 @@ path {
 .z_2 {
   z-index: 2 !important;
 }
+.z_3 {
+  z-index: 3 !important;
+}
 .curser {
   cursor: pointer;
 }
@@ -393,6 +396,10 @@ path {
 }
 .footerLine {
   border: 3px solid #182449;
+}
+.slick-slider {
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .sectionContainer {
@@ -434,7 +441,7 @@ path {
   filter: blur(250px);
   width: 280px;
   height: 280px;
-  z-index: -2;
+  z-index: -1;
   top: 0%;
 }
 .positionskyBox2 {
@@ -617,7 +624,7 @@ path {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 60;
+  z-index: 60 !important;
   background-color: white;
   transition: 0.5s ease-in-out;
   height: 100vh;
@@ -631,7 +638,7 @@ path {
   position: fixed;
   top: 0;
   left: -100%;
-  z-index: 60;
+  z-index: 60 !important;
   background-color: white;
   transition: 0.5s ease-in-out;
   height: 100vh;
